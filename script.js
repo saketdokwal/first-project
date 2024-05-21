@@ -418,11 +418,35 @@
 
 //if else statement
 
-var name="Saket";
-var gender="Male";
-if(gender== "Male"){
-    console.log("Hello Mr." + name);
+// var name="Saket";
+// var gender="Male";
+// if(gender== "Male"){
+//     console.log("Hello Mr." + name);
+// }
+// else{
+//     console.log("Hello Miss."+name);
+// }
+
+// Encapsulation 
+class person{
+    constructor(name,age){
+        this._name=name;
+        this._age=age;
+    }
+    get name(){
+        return this._name;
+    }
+    set name(newName){
+        if(newName){
+            this._name=newName;
+        }
+    }
+    displayDetail(){
+        console.log(`Name: ${this._name} and age: ${this._age}`);
+    }
 }
-else{
-    console.log("Hello Miss."+name);
-}
+const person1= new person("John , 30");
+console.log(person1.name);
+person1.name="jane";
+console.log(person1.name);
+person1.displayDetail();
