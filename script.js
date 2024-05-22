@@ -428,25 +428,106 @@
 // }
 
 // Encapsulation 
-class person{
-    constructor(name,age){
-        this._name=name;
-        this._age=age;
-    }
-    get name(){
-        return this._name;
-    }
-    set name(newName){
-        if(newName){
-            this._name=newName;
-        }
-    }
-    displayDetail(){
-        console.log(`Name: ${this._name} and age: ${this._age}`);
+// class person{
+//     constructor(name,age){
+//         this._name=name;
+//         this._age=age;
+//     }
+//     get name(){
+//         return this._name;
+//     }
+//     set name(newName){
+//         if(newName){
+//             this._name=newName;
+//         }
+//     }
+//     displayDetail(){
+//         console.log(`Name: ${this._name} and age: ${this._age}`);
+//     }
+// }
+// const person1= new person("John , 30");
+// console.log(person1.name);
+// person1.name="jane";
+// console.log(person1.name);
+// person1.displayDetail();
+
+// Encapsulation : Encapsulation is defined as wrapping of data under a single unit.
+// it is the mechanism that binds code and the data
+// encapsulation is the process of binding the data (i.e variable) with the functions acting on the data
+
+// class student
+// {
+//     constructor()
+//     {
+//         let name,marks;
+//     }
+//     getName()
+//     {
+//         return this.name;
+//     }
+//     setName(name)
+//     {
+//         this.name=name;
+//     }
+//     getMarks(){
+//         return this.marks;
+//     }
+//     setMarks(marks)
+//     {
+//         this.marks=marks;
+//     }
+// }
+// let stu =new student();
+// stu.setName("Saket");
+// stu.setMarks("90");
+
+// console.log(stu.getName(),stu.getMarks());
+
+// Polymorphism means "many shapes" and allow objects to be treaded assistances of their parent class rather than their actual class
+
+// class animal
+// {
+//     speak(){
+//         console.log("this is parent class");
+//     }
+// }
+// class dog extends animal{
+//     speak(){
+//         console.log("this is our first sub class");
+//     }
+// }
+// class cat extends animal{
+//     speak(){
+//         console.log("this is second sub class ");
+//     }
+// }
+
+// const animalss =[new animal(),new dog(),new cat()]
+// animalss.forEach(animalss => animalss.speak());
+
+// Abstraction : Abstraction hides the detail of how the things work and let you use simple commands to get things done
+
+class animal 
+{
+    makeSound(){
+        throw new Error("this method should be overidden by sub classes")
     }
 }
-const person1= new person("John , 30");
-console.log(person1.name);
-person1.name="jane";
-console.log(person1.name);
-person1.displayDetail();
+class dog extends animal{
+    makeSound(){
+        console.log('Woof Woof');
+    }
+}
+class cat extends animal{
+    makeSound(){
+        console.log("Meow Meow");
+    }
+}
+const mydog = new dog()
+mydog.makeSound();
+
+const mycat = new cat()
+mycat.makeSound();
+
+// const myanimal = new animal()
+// myanimal.makeSound();
