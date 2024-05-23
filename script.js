@@ -507,27 +507,54 @@
 
 // Abstraction : Abstraction hides the detail of how the things work and let you use simple commands to get things done
 
-class animal 
-{
-    makeSound(){
-        throw new Error("this method should be overidden by sub classes")
-    }
-}
-class dog extends animal{
-    makeSound(){
-        console.log('Woof Woof');
-    }
-}
-class cat extends animal{
-    makeSound(){
-        console.log("Meow Meow");
-    }
-}
-const mydog = new dog()
-mydog.makeSound();
+// class animal 
+// {
+//     makeSound(){
+//         throw new Error("this method should be overidden by sub classes")
+//     }
+// }
+// class dog extends animal{
+//     makeSound(){
+//         console.log('Woof Woof');
+//     }
+// }
+// class cat extends animal{
+//     makeSound(){
+//         console.log("Meow Meow");
+//     }
+// }
+// const mydog = new dog()
+// mydog.makeSound();
 
-const mycat = new cat()
-mycat.makeSound();
+// const mycat = new cat()
+// mycat.makeSound();
 
 // const myanimal = new animal()
 // myanimal.makeSound();
+
+// array map function
+// const num=[1,2,3,4,5];
+// const doubled=num.map(function(num)
+// {
+//     return num *3;
+// })
+// console.log(doubled);
+
+// var ary =[11,112,33,44];
+// var b=ary.map(test);
+// console.log(b);
+// function test(x){
+//     return x * 10;
+// // }
+// var ary=[15,15,156,155];
+// var b =ary.map(function(ary)
+// {
+//     return ary *3;
+// })
+// console.log(b);
+
+// exapmle lower case to uper case using map function
+let data = ['javascript','html','css'];
+let result = data.map(data=> data.toUpperCase());
+console.log(result);
+
