@@ -554,7 +554,37 @@
 // console.log(b);
 
 // exapmle lower case to uper case using map function
-let data = ['javascript','html','css'];
-let result = data.map(data=> data.toUpperCase());
-console.log(result);
+// let data = ['javascript','html','css'];
+// let result = data.map(data=> data.toUpperCase());
+// console.log(result);
 
+// ES6 Functions 
+
+// const counter =(x,y) => x*y;
+// console.log(counter(45,55));
+
+// Function returning an object with ES6
+// const  counter =(name,age) =>{
+//     return {
+//         name:name,
+//         age:age
+//     }
+// }
+// console.log(counter("saket",25));
+
+//  Array.prototype.map() Method
+// This function takes another function as ann argument and applies it to each element of the array.
+// Example 1:
+// const array1 =[11,44,99,66];
+// const map1 = array1.map((x) => x*3);
+// console.log(map1);
+
+// Example 2:
+const counter =["Himanshu","saket","suraj"]
+const changeTouppercase = counter.map(counter=>counter.charAt(0).toUpperCase()+counter.slice(1));
+console.log(changeTouppercase);
+
+// slice array
+
+const animals=['ant','bison','camel','duck','elephant'];
+console.log(animals.slice(2));
