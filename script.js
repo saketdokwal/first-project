@@ -580,11 +580,101 @@
 // console.log(map1);
 
 // Example 2:
-const counter =["Himanshu","saket","suraj"]
-const changeTouppercase = counter.map(counter=>counter.charAt(0).toUpperCase()+counter.slice(1));
-console.log(changeTouppercase);
+// const counter =["Himanshu","saket","suraj"]
+// const changeTouppercase = counter.map(counter=>counter.charAt(0).toUpperCase()+counter.slice(1));
+// console.log(changeTouppercase);
 
-// slice array
+// // slice array
 
-const animals=['ant','bison','camel','duck','elephant'];
-console.log(animals.slice(2));
+// const animals=['ant','bison','camel','duck','elephant'];
+// console.log(animals.slice(2));
+
+// filter method in javascript 
+// example 1:
+// const counter =[1,2.3,31,5,4];
+// evenNo=counter.filter(x => x%2==0);
+// console.log(evenNo);
+
+// example 2:
+
+// const arr = ["him", "saket", "sooraj", "sudhanshu"];
+// const stringFilter = arr.filter(x => 
+//         x ==="him" || x === "sudhanshu");
+// console.log(stringFilter);        
+
+// example second :
+// const words =['spray','elite','exuberant','destruction','present'];
+// const result = words.filter((word) => word.length>6);
+// console.log(result);
+
+// example 3:
+// const num = [12,5,8,221,33];
+// biggerno = num.filter((x => x>=10));
+// console.log(biggerno);
+
+// map new example
+
+// const arr=[2,5,8,4,88];
+// const output=arr.map((x=> x*2));
+// console.log(output);
+// making the array into binary
+// const arr=[2,5,8,4,88];
+// const output=arr.map((x=> x.toString(2)));
+// console.log(output);
+
+// FROM BELOW ARRAY GET THE FIRST NAME AND AGE <30
+
+// const user=[
+//     { firstName:"Saket", lastName:"Dokwal", age:26},
+//     { firstName:"Namit", lastName:"Kaushik", age:75},
+//     { firstName:"Aakash", lastName:"Bhuckal", age:50},
+//     { firstName:"Ritesh", lastName:"Saini", age:26}
+//     ]
+// const output=user.filter((x)=> x.age<30).map((x)=>x.firstName);
+// console.log(output);
+
+// Trying to understand reduce function
+// first solving without reduce function
+// const arr=[5,3,1,4,6];
+// // sum or max
+// function findSum(arr){
+//     let sum=0;
+//     for (let i=0; i < arr.length; i++){
+//         sum=sum + arr[i];
+//     }
+//     return sum;
+// }
+
+// console.log(findSum(arr));
+
+// // with reduce function
+// const output = arr.reduce(function(acc,curr){
+//     acc = acc + curr;
+//     return acc;
+// },0);
+// console.log(output);
+
+// example second for reduce function with and without reduce function
+
+const arr=[5,1,3,2,6];
+// max
+
+function findMax(arr) {
+    let max=0;
+    for (let i=0; i < arr.length; i++){
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+console.log(findMax(arr));
+
+// with reduce function
+const output=arr.reduce(function(max,curr){
+    if(curr>max){
+        max=curr;
+    }
+    return max;
+},0);
+console.log(output);
